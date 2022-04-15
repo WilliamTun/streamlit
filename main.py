@@ -11,6 +11,7 @@ header = st.container()
 dataset = st.container()
 features = st.container()  
 model_training = st.container()
+image = st.container()
 
 with header:
 	st.title('Welcome to my awesome data science project')
@@ -43,5 +44,8 @@ with model_training:
 	n_estimators = sel_col.selectbox('How manu trees should there be', options=[100,200,300,'No Limit'], index = 0) # default value should be index 0 of list
 
 	input_feature = sel_col.text_input('Which feature should be used as the input feature?', 'PULocationID')
+
+with image:
+	st.image("data/image.png")
 
 
